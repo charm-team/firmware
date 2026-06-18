@@ -1,0 +1,8 @@
+[workspace]
+resolver = "3"
+members = ["bootloader", "firmware"]
+
+[workspace.dependencies]
+sifli-hal = { git = "https://github.com/charm-team/sifli-rs.git", rev = "82d788259e435c9fdde430acfac182882f69ad97", default-features = false }
+sifli-radio = { git = "https://github.com/charm-team/sifli-rs.git", rev = "82d788259e435c9fdde430acfac182882f69ad97", default-features = false }
+sifli-pac = { version = "0.2.0", git = "https://github.com/OpenSiFli/sifli-pac", rev = "bc148a3" }
