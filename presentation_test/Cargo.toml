@@ -1,0 +1,52 @@
+[package]
+name = "presentation_test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sifli-hal = { workspace = true, default-features = false, features = [
+  "rt",
+  "time",
+  "time-driver-gptim1",
+  "sf32lb52x",
+  "log",
+  "unstable-pac",
+] }
+
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+cortex-m-rt = { version = "0.7.5", features = ["set-sp", "set-vtor"] }
+cortex-m-semihosting = { version = "0.5" }
+panic-halt = "*"
+
+embassy-sync = { version = "0.7.2", features = ["log"] }
+embassy-executor = { version = "0.9", features = [
+  "arch-cortex-m",
+  "executor-thread",
+  "log",
+] }
+embassy-time = { version = "0.5.0", features = ["tick-hz-32_768", "log"] }
+embassy-futures = "0.1.2"
+
+embedded-io = { version = "0.7" }
+embedded-io-async = { version = "0.7" }
+embedded-hal-async = { version = "1.0" }
+embassy-boot = { version = "0.7", features = ["log"] }
+
+heapless = "0.9"
+static_cell = "2.1.1"
+portable-atomic = "1.11.1"
+
+# USB dependencies
+embassy-usb = { version = "0.5", features = ["log"] }
+log = "0.4.32"
+critical-section = "1.2.0"
+hex = { version = "0.4.3", default-features = false }
+
+[build-dependencies]
+png = "0.17"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"

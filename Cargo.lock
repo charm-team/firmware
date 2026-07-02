@@ -1214,6 +1214,33 @@ dependencies = [
 ]
 
 [[package]]
+name = "presentation_test"
+version = "0.1.0"
+dependencies = [
+ "cortex-m",
+ "cortex-m-rt",
+ "cortex-m-semihosting",
+ "critical-section",
+ "embassy-boot",
+ "embassy-executor",
+ "embassy-futures",
+ "embassy-sync 0.7.2",
+ "embassy-time",
+ "embassy-usb",
+ "embedded-hal-async",
+ "embedded-io 0.7.1",
+ "embedded-io-async 0.7.0",
+ "heapless 0.9.3",
+ "hex",
+ "log",
+ "panic-halt",
+ "png",
+ "portable-atomic",
+ "sifli-hal",
+ "static_cell",
+]
+
+[[package]]
 name = "primeorder"
 version = "0.13.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"

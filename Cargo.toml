@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["bootloader", "firmware"]
+members = ["bootloader", "firmware", "presentation_test"]
 
 [workspace.dependencies]
 sifli-hal = { git = "https://github.com/charm-team/sifli-rs.git", rev = "82d788259e435c9fdde430acfac182882f69ad97", default-features = false }
