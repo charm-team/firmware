@@ -1,7 +1,6 @@
 MEMORY
 {
-  # bootloader should only take 64k max
-  FLASH : ORIGIN = 0x12010000, LENGTH = 64K
+  FLASH : ORIGIN = 0x12010000, LENGTH = 1024K
   # Note: The last 1KB of HPSYS RAM is reserved by SDK for inter-core mailbox IPC buffer:
   # - 0x2007FC00..0x2007FDFF (CH2, 512B)
   # - 0x2007FE00..0x2007FFFF (CH1, 512B)
